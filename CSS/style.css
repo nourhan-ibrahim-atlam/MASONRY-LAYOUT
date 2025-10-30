@@ -1,0 +1,305 @@
+/* ========== COMMON STYLE ========== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Permanent Marker", cursive;
+}
+
+body {
+    background-color: #eee;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* ========== HEADER ========== */
+
+header {
+    background-color: #fff;
+    margin-bottom: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand img {
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.brand h3 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.nav-list li a , 
+.btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    border: 1px solid #d43a3a;
+    padding: 10px;
+    width: 110px;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-list li a:hover , 
+.btn:hover {
+    background-color: #d43a3a;
+    color: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+    .brand {
+        padding-left: 10px;
+    }
+
+    .brand h3 {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .nav-list {
+        width: 60%;
+        padding-right: 10px;
+    }
+
+    .nav-list li a {
+        width: auto;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1480px) {
+    .brand {
+        padding-left: 10px;
+    }
+
+    .brand h3 {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .nav-list li a {
+        width: auto;
+        font-size: 1.1rem;
+    }
+}
+
+/* ========== CONTENT ========== */
+
+.content {
+    margin-bottom: 150px;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content-item {
+    position: relative;
+    height: 300px;
+    width: 385px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.main-content-item:hover {
+    bottom: 10px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.main-content-item img {
+    width: 100%;
+    height: 100%;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.main-content-item-desc {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.main-content-item-desc span , 
+.main-content-item-desc p {
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.main-content-item-desc span {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.main-content-item-desc p {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.btn {
+    margin: 20px auto;
+    font-size: 1rem;
+    width: 20%;
+}
+
+@media (max-width: 600px) {
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .main-content {
+        display: block;
+    }
+
+    .main-content-item {
+        margin: 30px auto;
+    }
+
+    .btn {
+        width: 30%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1480px) {
+    .main-content {
+        flex-wrap: wrap;
+    }
+
+    .main-content-item {
+        margin: 30px auto;
+    }
+
+    .btn {
+        width: 25%;
+    }
+}
+
+/* ========== MASONRY LAYOUT ========== */
+
+#art h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.masonry {
+    columns: 4;
+    column-gap: 20px;
+}
+
+.masonry img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 1rem;
+}
+
+@media (max-width: 600px) {
+    .masonry {
+        columns: 2;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+    .masonry {
+        columns: 3;
+    }
+}
+
+/* ========== SCROLL TOP ========== */
+.scroll-top {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #d43a3a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.scroll-top:hover {
+    background-color: #d43a3a;
+    color: #fff;
+}
+
+.scroll-top {
+    font-size: 1.3rem;
+}
+
+/* ========== SCROLL BAR ========== */
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d43a3a; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
